@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RiotSupportTicket",
+  "type": "object",
+  "required": [
+    "ticket_id",
+    "player_id",
+    "category",
+    "subcategory",
+    "subject",
+    "body",
+    "language",
+    "priority",
+    "created_at",
+    "resolution"
+  ],
+  "properties": {
+    "ticket_id": { "type": "string" },
+    "player_id": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["vanguard_error", "ban_penalty", "purchase_billing"]
+    },
+    "routing_branch": {
+      "type": "string",
+      "enum": ["penalizaciones", "tecnica", "billing"]
+    },
+    "subcategory": { "type": "string" },
+    "subject": { "type": "string" },
+    "body": { "type": "string" },
+    "language": { "type": "string" },
+    "priority": { "type": "string", "enum": ["low", "medium", "high"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "resolution": {
+      "type": "object",
+      "required": ["response_draft", "action", "resolution_time_mins"],
+      "properties": {
+        "response_draft": { "type": "string" },
+        "action": { "type": "string", "enum": ["close", "escalate"] },
+        "resolution_time_mins": { "type": "integer" }
+      }
+    }
+  }
+}

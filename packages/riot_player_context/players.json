@@ -1,0 +1,149 @@
+{
+  "players": [
+    {
+      "player_id": "abc123",
+      "riot_id": "PlayerOne#NA1",
+      "account_id": "acc-abc123",
+      "status": "active",
+      "region": "NA",
+      "created_at": "2019-04-12",
+      "email_verified": true,
+      "ban": null,
+      "tickets": [
+        {
+          "ticket_id": "RGT-00010",
+          "category": "technical",
+          "resolution": "close"
+        }
+      ],
+      "purchases": [
+        {
+          "sku": "RP-1000",
+          "amount": 9.99,
+          "currency": "USD",
+          "at": "2026-08-20T14:00:00Z",
+          "refunded": false
+        }
+      ],
+      "refunds_used": 0
+    },
+    {
+      "player_id": "banned42",
+      "riot_id": "TiltLord#EUW",
+      "account_id": "acc-banned42",
+      "status": "permanently_banned",
+      "region": "EUW",
+      "created_at": "2021-01-03",
+      "email_verified": true,
+      "ban": {
+        "type": "permanent",
+        "reason": "Third-party cheat detected",
+        "at": "2026-08-01T09:12:00Z",
+        "duration": null,
+        "apelable": false
+      },
+      "tickets": [
+        {
+          "ticket_id": "RGT-00088",
+          "category": "ban_penalty",
+          "resolution": "close"
+        }
+      ],
+      "purchases": [],
+      "refunds_used": 0
+    },
+    {
+      "player_id": "appeal99",
+      "riot_id": "MaybeFalse#KR",
+      "account_id": "acc-appeal99",
+      "status": "permanently_banned",
+      "region": "KR",
+      "created_at": "2020-11-22",
+      "email_verified": true,
+      "ban": {
+        "type": "permanent",
+        "reason": "Manual review — contested",
+        "at": "2026-09-02T18:00:00Z",
+        "duration": null,
+        "apelable": true
+      },
+      "tickets": [],
+      "purchases": [],
+      "refunds_used": 0
+    },
+    {
+      "player_id": "tempban7",
+      "riot_id": "ChatToxic#BR1",
+      "account_id": "acc-tempban7",
+      "status": "suspended",
+      "region": "BR",
+      "created_at": "2022-06-01",
+      "email_verified": true,
+      "ban": {
+        "type": "temporary",
+        "reason": "Chat restriction / ranked suspend",
+        "at": "2026-09-10T12:00:00Z",
+        "duration": "14d",
+        "apelable": false
+      },
+      "tickets": [],
+      "purchases": [],
+      "refunds_used": 0
+    },
+    {
+      "player_id": "buyer55",
+      "riot_id": "SkinCollector#LAS",
+      "account_id": "acc-buyer55",
+      "status": "active",
+      "region": "LAS",
+      "created_at": "2018-02-02",
+      "email_verified": false,
+      "ban": null,
+      "tickets": [
+        {
+          "ticket_id": "RGT-00201",
+          "category": "purchase_billing",
+          "resolution": "close"
+        }
+      ],
+      "purchases": [
+        {
+          "sku": "RP-5350",
+          "amount": 49.99,
+          "currency": "USD",
+          "at": "2026-09-01T11:00:00Z",
+          "refunded": false
+        },
+        {
+          "sku": "bundle-champion",
+          "amount": 19.99,
+          "currency": "USD",
+          "at": "2026-09-01T11:01:00Z",
+          "refunded": false
+        }
+      ],
+      "refunds_used": 1
+    },
+    {
+      "player_id": "fraud01",
+      "riot_id": "UnknownCharge#NA1",
+      "account_id": "acc-fraud01",
+      "status": "active",
+      "region": "NA",
+      "created_at": "2026-08-28",
+      "email_verified": true,
+      "ban": null,
+      "tickets": [],
+      "purchases": [
+        {
+          "sku": "RP-15000",
+          "amount": 99.99,
+          "currency": "USD",
+          "at": "2026-09-12T03:14:00Z",
+          "refunded": false
+        }
+      ],
+      "refunds_used": 0
+    }
+  ]
+}

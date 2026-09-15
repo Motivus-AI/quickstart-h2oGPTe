@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "riot-support-agent"
+version = "0.1.0"
+description = "Riot Games helpdesk assistant for Enterprise h2oGPTe (LangGraph custom agent)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "h2ogpte==1.7.3",
+    "python-dotenv",
+    "httpx",
+    "pydantic>=2",
+    "beautifulsoup4",
+    "lxml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "langgraph",
+    "langchain-core",
+    "mcp>=1.2,<2",
+]
+agent = [
+    "langgraph",
+    "langchain-core",
+]
+mcp = [
+    "mcp>=1.2,<2",
+]
+
+[project.scripts]
+riot-ingest = "riot_support_agent.ingestion.ingest_collections:main"
+riot-scrape = "riot_support_agent.ingestion.zendesk_scraper:main"
+riot-eval = "riot_support_agent.benchmark.eval:main"
+riot-deploy = "riot_support_agent.deploy_partners:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "packages/riot_helpdesk_agent",
+    "packages/riot_player_context",
+    "tests",
+]
+pythonpath = [
+    "src",
+    "packages/riot_helpdesk_agent",
+    "packages/riot_player_context",
+]

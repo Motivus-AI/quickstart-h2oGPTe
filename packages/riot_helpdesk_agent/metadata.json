@@ -1,0 +1,39 @@
+{
+  "agent_info": {
+    "name": "riot_helpdesk_agent",
+    "description": "LangGraph helpdesk assistant that classifies Riot support tickets, routes to a knowledge branch, calls player-context tools, and drafts a human-reviewed reply.",
+    "framework": "langgraph",
+    "created": "2026-09-14T00:00:00Z"
+  },
+  "function_info": {
+    "name": "run_helpdesk",
+    "is_async": false,
+    "return_type": "str",
+    "parameter_names": ["query", "chat_history"],
+    "parameters": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": false,
+        "default": "VAN 57 error al iniciar Valorant. player_id=abc123",
+        "description": "Incoming support ticket text (subject + body + optional player_id)."
+      },
+      {
+        "name": "chat_history",
+        "type": "Optional[List[Dict[str, str]]]",
+        "required": false,
+        "default": null,
+        "description": "Conversation history in OpenAI format."
+      }
+    ]
+  },
+  "mcp_servers": ["riot-player-context"],
+  "mcp_config": {
+    "mcp_dir": "${MCP_DIR}",
+    "riot-player-context": {
+      "path_constant": "RIOT_PLAYER_CONTEXT_MCP_SERVER_PATH",
+      "path_value": "${MCP_DIR}/riot_player_context/server.py",
+      "transport": "stdio"
+    }
+  }
+}

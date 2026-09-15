@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Packaged agent/tool zips
+dist/
+
+# Full Zendesk scrape (keep committed sample_*.md files)
+data/knowledge_base/**/scraped_*.md
+data/benchmark/report.json
+data/collections.json
+.DS_Store
